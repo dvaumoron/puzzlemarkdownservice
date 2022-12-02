@@ -19,7 +19,7 @@ option java_multiple_files = true;
 option java_package = "io.dvaumoron.puzzlemarkdownservice";
 option java_outer_classname = "PuzzleMarkdownServiceProto";
 
-package puzzlemarkdownnservice;
+package puzzlemarkdownservice;
 
 // The session service definition.
 service Markdown {

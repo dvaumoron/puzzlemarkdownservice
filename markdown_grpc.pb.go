@@ -35,7 +35,7 @@ func NewMarkdownClient(cc grpc.ClientConnInterface) MarkdownClient {
 
 func (c *markdownClient) Apply(ctx context.Context, in *MarkdownText, opts ...grpc.CallOption) (*MarkdownHtml, error) {
 	out := new(MarkdownHtml)
-	err := c.cc.Invoke(ctx, "/puzzlemarkdownnservice.Markdown/Apply", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/puzzlemarkdownservice.Markdown/Apply", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -80,7 +80,7 @@ func _Markdown_Apply_Handler(srv interface{}, ctx context.Context, dec func(inte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/puzzlemarkdownnservice.Markdown/Apply",
+		FullMethod: "/puzzlemarkdownservice.Markdown/Apply",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MarkdownServer).Apply(ctx, req.(*MarkdownText))
@@ -92,7 +92,7 @@ func _Markdown_Apply_Handler(srv interface{}, ctx context.Context, dec func(inte
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var Markdown_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "puzzlemarkdownnservice.Markdown",
+	ServiceName: "puzzlemarkdownservice.Markdown",
 	HandlerType: (*MarkdownServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
