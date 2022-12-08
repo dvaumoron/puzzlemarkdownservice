@@ -23,13 +23,13 @@ package puzzlemarkdownservice;
 
 // The session service definition.
 service Markdown {
-  rpc Apply (MarkdownText) returns (MarkdownHtml);
+    rpc Apply (MarkdownText) returns (MarkdownHtml);
 }
 
 message MarkdownText {
-  string text = 1;
+    string text = 1;
 }
 
 message MarkdownHtml {
-  string html = 1;
+    string html = 1;
 }
