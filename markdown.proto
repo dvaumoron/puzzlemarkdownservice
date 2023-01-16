@@ -21,7 +21,7 @@ option java_outer_classname = "PuzzleMarkdownServiceProto";
 
 package puzzlemarkdownservice;
 
-// The session service definition.
+// The markdown service definition.
 service Markdown {
     rpc Apply (MarkdownText) returns (MarkdownHtml);
 }
